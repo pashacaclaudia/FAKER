@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    .titolo 
+        h1 #{person.name}
+    .img-dettagli(style=`background:url('${person.image}') top center no-repeat; background-size: cover;`)
+    p.categoria Email: &nbsp
+    p #{person.email}
+    br
+    p.categoria Sito web: &nbsp
+    p #{person.url}
+    br
+    p.categoria Stato: &nbsp
+    p #{person.country}
+    br
+    p.categoria Citazione più famosa: &nbsp
+    p #{person.quote}

@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    .titolo
+        h1 Citazioni di #{person.name}
+    .quotes
+        each sentence in quotes
+            .sentence - #{sentence}
+    a(href=`/dettagli/${person.name}`) Dettagli scrittore
