@@ -1,0 +1,15 @@
+body {
+  padding: 50px;
+  font: 14px 'Montserrat', sans-serif;
+}
+
+.container-writers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}

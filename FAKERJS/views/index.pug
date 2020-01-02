@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1 SCRITTORI
+    .container-writers
+        each writer in people
+            .writer
+                div.img(style=`background:url('${writer.image}') top center no-repeat; background-size: cover;`)
+                h1 #{writer.name}
+
