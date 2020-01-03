@@ -1,6 +1,11 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+    .titolo
+        h1= message
+    br
+    .center
+        if(error.status == 422)
+            p Controlla di aver scritto correttamente il nome dello scrittore che hai ricercato o selezionane uno dalla home
+        else
+            p Errore

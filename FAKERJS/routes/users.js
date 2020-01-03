@@ -21,8 +21,10 @@ function createFakePeople()
         let randomUrl = faker.internet.url();
         let randomCountry = faker.address.country();
         let randomImage = faker.image.avatar();
+        let randomNumber = faker.random.number();
     
         let person = {
+            id: randomNumber,
             name: randomName,
             quote: randomQuote,
             email: randomEmail,
