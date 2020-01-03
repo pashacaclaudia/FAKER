@@ -4,7 +4,13 @@ var router = express.Router();
 var country = require('countryjs');
 
 router.get('/', function(req, res, next) {
- res.render('index', { title: 'Express' });
+    res.render('index', {
+        title: 'Express'
+    });
+});
+
+router.get('/query/state', function(req, res, next) {
+    res.send(country.info(req.query.state));
 });
 
 router.get('/pages/:state/', function(req, res, next){
@@ -15,6 +21,6 @@ router.get('/pages/:state/', function(req, res, next){
  {
    res.render('state', {state: country.info(req.params.state)}) ; //Rendiamo lo stato un parametro
  }
-})
+});
 
 module.exports = router;
